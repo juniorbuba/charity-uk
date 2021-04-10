@@ -93,10 +93,6 @@ a, a:focus, a:hover {
   padding: 60px;
 }
 
-/**
- *  Typography
- *
- **/
 .btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
   font-size: 1em;
   line-height: inherit;
@@ -104,6 +100,11 @@ a, a:focus, a:hover {
 
 .gray-bg {
   background: #f9f9ff;
+}
+
+.logo{
+  width: 80px;
+  height: 70px;
 }
 
 h1, h2, h3,
