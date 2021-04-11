@@ -155,15 +155,6 @@ td, th {
   border-radius: 0px;
 }
 
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
 .clear::before, .clear::after {
   content: " ";
   display: table;
@@ -735,7 +726,7 @@ td, th {
   padding: 0 40px;
   border-radius: 20px;
   background: transparent;
-  border: 1px solid #00ff8c;
+  border: 1px solid rgb(61,140,45);
   color: #222222;
   display: inline-block;
   font-weight: 600;
@@ -760,7 +751,7 @@ td, th {
 }
 
 .primary-btn:hover {
-  background: #00ff8c;
+  background: rgb(61,140,45);
   color: #fff;
   box-shadow: 0px 10px 20px 0px rgba(60, 64, 143, 0.2);
 }
@@ -780,52 +771,6 @@ td, th {
   color: #222222;
 }
 
-.progressBar,
-.progressBar-contentCircle {
-  display: table;
-  height: 150px;
-  position: absolute;
-  width: 150px;
-}
-
-.progressBar-circle,
-.progressBar-background {
-  fill: none;
-  stroke: #777777;
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-dasharray: 0;
-  stroke-dashoffset: 0;
-  position: relative;
-  z-index: 10;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.progressBar-background {
-  stroke: #f9f9ff;
-  stroke-width: 4;
-  z-index: 0;
-}
-
-.progressBar-percentage {
-  color: #222222;
-  font-size: 24px;
-  text-align: center;
-  width: 100%;
-  display: table-cell;
-  vertical-align: middle;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-/************************/
-/* page structure */
-/************************/
 .list {
   list-style: none;
   margin: 10px auto;
@@ -833,11 +778,11 @@ td, th {
 }
 
 .list:hover .progressBar-circle {
-  stroke: #00ff8c;
+  stroke: rgb(61,140,45);
 }
 
 .list:hover .progressBar-percentage {
-  color: #00ff8c;
+  color: rgb(61,140,45);
 }
 
 .list-item {
@@ -847,7 +792,7 @@ td, th {
 }
 
 .details-btn {
-  border: 1px solid #00ff8c;
+  border: 1px solid rgb(61,140,45);
   width: 40px;
   height: 40px;
   border-radius: 20px;
@@ -874,7 +819,7 @@ td, th {
 
 .details-btn:hover {
   width: 140px;
-  background: #00ff8c;
+  background: rgb(61,140,45);
   box-shadow: 0px 10px 20px 0px rgba(60, 64, 143, 0.2);
 }
 
@@ -936,7 +881,7 @@ td, th {
 }
 
 .default-header nav .main-menu a:hover {
-  color: #00ff8c;
+  color: rgb(61,140,45);
 }
 
 .default-header nav .mobile-btn {
@@ -956,7 +901,7 @@ td, th {
     position: absolute;
     top: 40px;
     right: 0;
-    background: #4a4fad;
+    background: rgb(1,156,236);
     padding: 30px 20px;
   }
   .default-header .main-menu a {
@@ -978,85 +923,7 @@ td, th {
 .is-sticky .sticky-header {
   background: -moz-linear-gradient(left, rgba(60, 64, 143, 0.95) 0%, rgba(91, 97, 207, 0.95) 100%);
   background: -webkit-linear-gradient(left, rgba(60, 64, 143, 0.95) 0%, rgba(91, 97, 207, 0.95) 100%);
-  background: linear-gradient(to right, rgba(60, 64, 143, 0.95) 0%, rgba(91, 97, 207, 0.95) 100%);
-}
-
-.search {
-  padding: 6px 20px;
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-}
-
-.search span {
-  color: #fff;
-}
-
-.search:hover .search-field {
-  transform: scaleY(1) !important;
-}
-
-@media (max-width: 767px) {
-  .search {
-    margin-right: 60px;
-  }
-}
-
-.search-field {
-  transform: scaleY(0);
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  position: absolute;
-  top: -13px;
-  right: -2px;
-}
-
-.search-field:hover {
-  transform: scaleY(1) !important;
-}
-
-.search-field input {
-  line-height: 60px;
-  background: #4a4fad;
-  width: 600px;
-  border: none;
-  color: #fff;
-  padding: 0 70px 0 25px;
-  font-weight: 400;
-}
-
-@media (max-width: 991px) {
-  .search-field input {
-    width: 400px;
-  }
-}
-
-@media (max-width: 767px) {
-  .search-field input {
-    width: 300px;
-  }
-}
-
-@media (max-width: 575px) {
-  .search-field input {
-    width: 200px;
-  }
-}
-
-.search-field .search-submit {
-  width: 60px;
-  height: 60px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.search-field .search-submit span {
-  color: #fff;
+  background: linear-gradient(to right, rgba(61, 64, 143, 0.95) 0%, rgba(1, 156, 236, 0.95) 100%);
 }
 
 .header-social {
@@ -1077,7 +944,7 @@ td, th {
 }
 
 .header-social a:hover {
-  color: #00ff8c;
+  color: rgb(61,140,45);
 }
 
 .footer-social {
@@ -1093,7 +960,7 @@ td, th {
 }
 
 .footer-social a:hover {
-  color: #00ff8c;
+  color: rgb(61,140,45);
 }
 
 .banner-area {
@@ -1140,7 +1007,7 @@ td, th {
 .single-product {
   margin-top: 30px;
   background: #fff;
-  border-bottom: 2px solid #00ff8c;
+  border-bottom: 2px solid rgb(61,140,45);
   padding: 70px 20px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -1155,7 +1022,7 @@ td, th {
 
 .single-product .icon span {
   font-size: 48px;
-  color: #00ff8c;
+  color: rgb(61,140,45);
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1183,7 +1050,7 @@ td, th {
 }
 
 .single-product:hover {
-  background: #00ff8c;
+  background: rgb(61,140,45);
 }
 
 .single-product:hover .icon span, .single-product:hover .desc h4, .single-product:hover .desc p {
@@ -1199,11 +1066,11 @@ td, th {
 }
 
 .controls .filter:hover {
-  color: #00ff8c !important;
+  color: rgb(61,140,45) !important;
 }
 
 .controls .filter.active {
-  color: #00ff8c !important;
+  color: rgb(61,140,45) !important;
 }
 
 .single-filter-content {
@@ -1232,7 +1099,7 @@ td, th {
   margin: 10px 0 15px 0;
   width: 100%;
   height: 1px;
-  background: #00ff8c;
+  background: rgb(61,140,45);
 }
 
 .single-filter-content:hover .overlay-bg-content {
@@ -1272,7 +1139,7 @@ td, th {
   margin: 20px 0 20px 0;
   width: 100%;
   height: 1px;
-  background: #00ff8c;
+  background: rgb(61,140,45);
 }
 
 .single-member .thumb .overlay-member .social a {
@@ -1282,7 +1149,7 @@ td, th {
 }
 
 .single-member .thumb .overlay-member .social a:hover {
-  color: #00ff8c;
+  color: rgb(61,140,45);
 }
 
 .single-member .thumb:hover .overlay-member {
@@ -1298,7 +1165,7 @@ td, th {
 }
 
 .single-member .desc h5 a:hover {
-  color: #00ff8c;
+  color: rgb(61,140,45);
 }
 
 .single-member .desc p {
@@ -1365,7 +1232,7 @@ td, th {
 
 .single-pricing-table .top .head span {
   font-size: 48px;
-  color: #00ff8c;
+  color: rgb(61,140,45);
 }
 
 .single-pricing-table .top .head h5 {
@@ -1378,7 +1245,7 @@ td, th {
 }
 
 .single-pricing-table .top .package .price {
-  color: #00ff8c;
+  color: rgb(61,140,45);
   font-size: 36px;
   margin-bottom: 10px;
   line-height: 1em;
@@ -1414,7 +1281,7 @@ td, th {
 }
 
 .active-testimonial-carousel .single-testimonial .author h6 a:hover {
-  color: #00ff8c;
+  color: rgb(61,140,45);
 }
 
 .active-testimonial-carousel .owl-dots {
@@ -1497,7 +1364,7 @@ td, th {
 }
 
 .cta-area {
-  background: #3d4191;
+  background: rgb(1,156,236);
   padding: 60px 0;
 }
 
@@ -1520,7 +1387,7 @@ footer .footer-nav li {
 }
 
 footer .footer-nav li a:hover {
-  color: #00ff8c;
+  color: rgb(61,140,45);
 }
 
 .subscription input {
@@ -1543,7 +1410,7 @@ footer .footer-nav li a:hover {
   position: absolute;
   top: 1px;
   right: 0;
-  border: 1px solid #00ff8c;
+  border: 1px solid rgb(61,140,45);
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1557,7 +1424,7 @@ footer .footer-nav li a:hover {
 }
 
 .subscription .newsletter-btn:hover {
-  background: #00ff8c;
+  background: rgb(61,140,45);
 }
 
 .subscription .info {
@@ -1569,7 +1436,7 @@ footer .footer-nav li a:hover {
 }
 
 .subscription .info.valid {
-  color: #00ff8c;
+  color: rgb(61,140,45);
 }
 
 .subscription .info.error {
@@ -1598,5 +1465,5 @@ footer .footer-nav li a:hover {
 }
 
 .footer-bottom .footer-text a:hover {
-  color: #00ff8c;
+  color: rgb(61,140,45);
 }
