@@ -917,12 +917,12 @@ td, th {
 }
 
 .sticky-header {
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 .is-sticky .sticky-header {
-  background: -moz-linear-gradient(left, rgba(60, 64, 143, 0.95) 0%, rgba(91, 97, 207, 0.95) 100%);
-  background: -webkit-linear-gradient(left, rgba(60, 64, 143, 0.95) 0%, rgba(91, 97, 207, 0.95) 100%);
+  background: -moz-linear-gradient(left, rgba(61, 64, 143, 0.95) 0%, rgba(1, 156, 236, 0.95) 100%);
+  background: -webkit-linear-gradient(left, rgba(61, 64, 143, 0.95) 0%, rgba(1, 156, 236, 0.95) 100%);
   background: linear-gradient(to right, rgba(61, 64, 143, 0.95) 0%, rgba(1, 156, 236, 0.95) 100%);
 }
 
@@ -1467,3 +1467,12 @@ footer .footer-nav li a:hover {
 .footer-bottom .footer-text a:hover {
   color: rgb(61,140,45);
 }
+
+.fa-map-marker{
+  color: rgb(61,140,45);
+}
+
+.fa-phone{
+  color: rgb(61,140,45);
+}
+
